@@ -3,19 +3,488 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .container {
+    @apply mx-auto max-w-[1400px] md:px-20 px-4  !important;
+  }
+  .donateBtn {
+    @apply bg-gradient-to-r from-green-500 to-emerald-600 rounded-full shadow-md shadow-green-400/60 border-none md:px-8 px-5   font-extrabold text-white/85;
+  }
+  .arrow_path {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 55%, 90% 100%, 0% 100%);
+  }
+
+  table.tblView,
+  .content {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .container table {
+    @apply border border-gray-100 max-w-[90vw] overflow-auto mx-auto;
+  }
+
+  .content {
+    /* General Mobile Adjustments */
+    /* @apply p-4 md:p-8; Reduce padding on mobile, increase for medium and up */
+
+    /* Headings */
+    h1 {
+      @apply text-3xl font-extrabold text-gray-900 leading-tight mb-4;
+    }
+    h2 {
+      @apply text-2xl font-semibold text-gray-800 leading-snug mb-4;
+    }
+    h3 {
+      @apply text-xl  font-semibold text-gray-700 leading-snug mb-3;
+    }
+    h4 {
+      @apply text-lg md:text-lg font-medium text-gray-600 leading-snug mb-2;
+    }
+    h5 {
+      @apply text-base  font-medium text-gray-500 leading-snug mb-2;
+    }
+    h6 {
+      @apply text-sm md:text-base font-medium text-gray-500 leading-snug mb-1;
+    }
+
+    /* Paragraphs and Text */
+    p {
+      @apply text-sm md:text-base text-gray-700 leading-relaxed mb-4;
+    }
+
+    /* Links */
+    a {
+      @apply text-blue-600 hover:text-blue-800 underline;
+    }
+
+    /* Blockquotes */
+    blockquote {
+      @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4 text-sm md:text-base;
+    }
+
+    /* Lists */
+    ul,
+    ol {
+      @apply list-disc list-inside pl-4 mb-4;
+    }
+
+    /* Images */
+    img {
+      @apply rounded-lg mx-auto h-auto text-center;
+    }
+    .image {
+      @apply mx-auto  text-center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    /* Horizontal Rule */
+    hr {
+      @apply border-t border-gray-200 my-4;
+    }
+
+    /* Code Blocks */
+    pre {
+      @apply bg-gray-900 text-white p-3 rounded-lg overflow-x-auto mb-4 text-sm;
+    }
+    code {
+      @apply bg-gray-100 text-gray-800 rounded p-1 text-sm;
+    }
+
+    /* Buttons */
+    button {
+      @apply bg-blue-600 text-white font-semibold py-2 px-4 rounded text-sm md:text-base;
+    }
+
+    /* Form Inputs */
+    input,
+    select,
+    textarea {
+      @apply border border-gray-300 rounded-lg p-2 text-sm text-gray-800 w-full mb-3;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      @apply outline-none ring-2 ring-blue-400 border-transparent;
+    }
+  }
+}
+
+.slide-top-hide {
+  animation: slideHideAnimation 0.8s forwards;
+}
+.blink {
+  animation: blink 1s linear infinite;
+}
+.liftUp {
+  animation: slideUpLift 1s infinite !important;
+}
+@keyframes slideHideAnimation {
+  0% {
+    margin-top: 0%;
+  }
+  90% {
+    margin-top: -100vh;
+  }
+  100% {
+    margin-top: -100vh;
+    display: none;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpLift {
+  0% {
+    opacity: 0;
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+button.nav.default-nav {
+  padding: 10px !important;
+  margin-right: 20px !important;
+  margin-left: 20px;
+}
+
+.react-slideshow-container + ul.indicators {
+  gap: 6px;
+}
+.PhoneInput {
+  width: 100% !important;
+  border: 1px solid #ddd !important;
+  text-align: left !important;
+  @apply p-2 rounded-md px-4 shadow-none mt-2 w-full  border border-input bg-transparent transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50;
+}
+button.each-slideshow-indicator.active {
+  width: 10px !important;
+  border-radius: 5px !important;
+  background: green !important;
+  margin-right: 5px !important;
+}
+button.each-slideshow-indicator.active::before {
+  width: 10px !important;
+  border-radius: 5px !important;
+  background: green !important;
+  margin-right: 5px !important;
+}
+button.nav.default-nav {
+  fill: green !important;
+}
+
+a.ytp-impression-link {
+  display: none !important;
+}
+.ytp-chrome-top.ytp-show-cards-title {
+  display: none !important;
+}
+
+.img-hor {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: rgb(236, 236, 236);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(173, 173, 173);
+  border-radius: 0px;
+  cursor: e-resize;
+}
+/* MApBox Css */
+
+.mapboxgl-popup.mapboxgl-popup-anchor-bottom {
+  max-width: 100% !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.mapboxgl-popup-content {
+  padding: 0px !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none !important;
+}
+
+button.mapboxgl-popup-close-button {
+  display: none !important;
+}
+
+button.nav.default-nav {
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right,
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  border-radius: 12px;
+  background: rgba(18, 138, 18, 0.519);
+  position: absolute !important;
+  z-index: 1;
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+  right: 0px;
+}
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  left: 0;
+}
+
+.react-calendar.border-none {
+  border: none !important;
+}
+
+.react-calendar__tile--active {
+  background: #68b030 !important;
+}
+
+.react-calendar.border-none.bg-primary {
+  background: #67b03010 !important;
+
+  padding: 5px;
+}
+
+.hide-c-arrow
+  button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right,
+.hide-c-arrow
+  button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  border-radius: 12px;
+  background: transparent;
+  position: absolute !important;
+  z-index: 1;
+}
+
+/* Fix Google Translate at the bottom of the page */
+#google_translate_element {
+  position: fixed;
+  bottom: 10px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the element */
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  z-index: 9999; /* Ensure it's on top */
+}
+
+/* Customize the dropdown style */
+.goog-te-combo {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hide Google branding (Optional, with caution) */
+.goog-logo-link {
+  display: none !important;
+}
+/* Hide the Google Translate toolbar */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Optionally hide the "Google Translate" icon from the toolbar */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Hide the "Show Original" and "Options" buttons */
+.goog-te-gadget-button {
+  display: none !important;
+}
+
+/* Hide the Google Translate toolbar */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Optionally hide the "Google Translate" icon from the toolbar */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Hide the "Show Original" and "Options" buttons */
+.goog-te-gadget-button {
+  display: none !important;
+}
+
+iframe#\:1\.container {
+  display: none;
+}
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  top: 0px !important;
+}
+
+a.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+  display: none;
+}
+
+.hide-scroll {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.react-multi-carousel-dot button {
+  @apply bg-gray-200 border-none w-3 h-2 rounded shadow border;
+}
+.react-multi-carousel-dot--active button {
+  @apply bg-green-500;
 }
