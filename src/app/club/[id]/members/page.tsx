@@ -3,7 +3,7 @@ import MemberCard from "./_components/memberCard";
 
 function page() {
   return (
-    <div className="container">
+    <div className="container mt-10">
       <h1 className="text-xl">Top Management: (6 Members)</h1>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-10 gap-5 mt-6">
         {Array(8)

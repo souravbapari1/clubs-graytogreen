@@ -3,6 +3,7 @@ import {
   Home,
   ImagePlay,
   LucideGraduationCap,
+  MapPinned,
   NotebookPen,
   PartyPopper,
   UsersIcon,
@@ -38,18 +39,23 @@ const menuItems = [
     icons: <PartyPopper size={18} className="text-primary/70" />,
   },
   {
-    name: "Club",
-    href: "/club",
+    name: "Sponsors",
+    href: "/club/id/sponsors",
     icons: <LucideGraduationCap size={18} className="text-primary/70" />,
   },
   {
-    name: "Club",
-    href: "/club",
+    name: "Gallery",
+    href: "/club/id/gallery",
     icons: <ImagePlay size={18} className="text-primary/70" />,
   },
   {
-    name: "Club",
-    href: "/club",
+    name: "Projects",
+    href: "/club/id/projects",
+    icons: <MapPinned size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Blogs",
+    href: "/club/id/blogs",
     icons: <NotebookPen size={18} className="text-primary/70" />,
   },
 ];
@@ -57,14 +63,14 @@ const menuItems = [
 function NavigationOptions() {
   return (
     <div className="fixed md:left-4 md:top-0 bottom-3 md:my-auto  z-40 md:h-full md:w-14 w-full flex md:flex-col flex-row justify-center items-center">
-      <div className=" flex md:justify-between md:flex-col flex-row md:items-center  shadow-md  bg-white md:w-14  p-2 rounded-full gap-2">
+      <div className=" flex md:justify-between md:flex-col flex-row md:items-center  shadow-md  bg-white md:w-14  p-2 md:rounded-full gap-1">
         {menuItems.map((item, index) => (
           <TooltipProvider key={index}>
             <Tooltip>
               <TooltipTrigger>
                 <Link
                   href={item.href}
-                  className="w-11 h-11 bg-primary/10 hover:bg-primary/20 rounded-full border-2 border-primary/20 flex justify-center items-center"
+                  className="md:w-11 w-10 md:h-11 h-10 bg-primary/10 hover:bg-primary/20 md:rounded-full border-2 border-primary/20 flex justify-center items-center"
                 >
                   {item.icons}
                 </Link>

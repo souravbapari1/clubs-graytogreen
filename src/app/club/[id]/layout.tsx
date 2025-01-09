@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NavigationOptions from "./_components/NavigationOptions";
+import { lora } from "@/lib/font";
+import Navbar from "@/components/layout/Navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${lora.className} ${geistMono.variable} antialiased`}>
         <NavigationOptions />
-        {children}
-        <div className="md:mb-0 mb-32"></div>
+        <Navbar />
+        <div className={geistSans.className}>{children}</div>
+        <div className="h-20 md:hidden" />
       </body>
     </html>
   );
