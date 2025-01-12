@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ClubSocialLink from "../gallery/_components/ClubSocialLink";
 
 function Header() {
   return (

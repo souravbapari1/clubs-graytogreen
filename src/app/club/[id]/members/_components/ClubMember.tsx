@@ -10,9 +10,9 @@ function ClubMember() {
         width={1000}
         height={1000}
         alt=""
-        className="md:h-60 h-40 w-full object-cover rounded-3xl md:shadow-md"
+        className="md:h-48 h-40 w-full object-cover rounded-3xl "
       />
-      <div className="w-full md:px-5 px-2 md:py-5 py-4 flex justify-between items-center">
+      <div className="w-full md:px-3 px-2 md:py-5 py-4 flex justify-between items-center">
         <div className="">
           <h1 className="font-bold">Zulfa Said</h1>
           <p className="font-extralight text-xs text-gray-500/80">
