@@ -62,7 +62,7 @@ const menuItems = [
 
 function NavigationOptions() {
   return (
-    <div className="fixed md:left-4 md:top-0 bottom-3 md:my-auto  z-40 md:h-full md:w-14 w-full flex md:flex-col flex-row justify-center items-center">
+    <div className=" fixed md:hidden md:left-4 md:top-0 bottom-3 md:my-auto  z-40 md:h-auto md:w-14 w-full flex  flex-row justify-center items-center">
       <div className=" flex md:justify-between md:flex-col flex-row md:items-center  shadow-md  bg-white md:w-14  p-2 md:rounded-full gap-1">
         {menuItems.map((item, index) => (
           <TooltipProvider key={index}>

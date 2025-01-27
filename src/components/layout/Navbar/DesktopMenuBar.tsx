@@ -9,7 +9,7 @@ import { montserrat } from "@/lib/font";
 
 function DesktopMenuBar() {
   return (
-    <div className="lg:flex lg:gap-8 gap-5 font-medium text-gray-500 hidden h-full bg-white w-full justify-center items-center">
+    <div className="lg:flex z-40 lg:gap-8 gap-5 font-medium text-gray-500 hidden h-full bg-white w-full justify-center items-center">
       {navData.map((e, i) => {
         return (
           <div className="relative group text-nowrap" key={"NavLink-" + i}>
