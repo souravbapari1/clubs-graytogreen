@@ -5,10 +5,72 @@ import DesktopMenuBar from "./DesktopMenuBar";
 import MobileMenuBar from "./MobileMenuBar";
 import Link from "next/link";
 import { IoMdOpen } from "react-icons/io";
+import {
+  Goal,
+  Home,
+  ImagePlay,
+  LucideGraduationCap,
+  MapPinned,
+  NotebookPen,
+  PartyPopper,
+  UsersIcon,
+} from "lucide-react";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import { LogIn, User } from "lucide-react";
-
+import NavigationOptions from "@/app/club/[id]/_components/NavigationOptions";
+import NavLink from "./NavLink";
+// import { useParams } from "next/navigation";
+const menuItems = [
+  {
+    name: "Home",
+    href: "/club/id",
+    icons: <Home size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Challenges and SDG",
+    href: "/club/id/challenges-and-sdg",
+    icons: <Goal size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Members",
+    href: "/club/id/members",
+    icons: <UsersIcon size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Events",
+    href: "/club/id/events",
+    icons: <PartyPopper size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Sponsors",
+    href: "/club/id/sponsors",
+    icons: <LucideGraduationCap size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Gallery",
+    href: "/club/id/gallery",
+    icons: <ImagePlay size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Projects",
+    href: "/club/id/projects",
+    icons: <MapPinned size={18} className="text-primary/70" />,
+  },
+  {
+    name: "Blogs",
+    href: "/club/id/blogs",
+    icons: <NotebookPen size={18} className="text-primary/70" />,
+  },
+];
 async function Navbar(): Promise<JSX.Element> {
+  // const paramts = useParams()
   return (
     <div className="sticky top-0 right-0 z-40  lg:shadow-none shadow-md shadow-gray-950/5">
       <div className="w-full flex bg-white z-50 justify-end items-end">
@@ -76,6 +138,8 @@ async function Navbar(): Promise<JSX.Element> {
           </Link>
         </div>
       </div>
+     
+      
     </div>
   );
 }
