@@ -4,28 +4,14 @@ import React, { ReactNode } from "react";
 
 function EventCard() {
   return (
-    <div className="w-full h-80 bg-white rounded-xl overflow-hidden shadow">
-      <Image
-        src="https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=qmOTkGstKj1qN0zPVWj-n28oRA6_BHQN8uVLIXg0TF8="
-        width={1000}
-        height={1000}
-        alt="image"
-        className="w-full h-36 object-cover"
-      />
-      <div className="p-4 px-5">
-        <h1>Event Name</h1>
-        <div className="flex flex-col gap-2 mt-5">
-          <TextList
-            icon={<CalendarCheck size={16} />}
-            text="20 May 2023 - 24 May 2023"
-          />
-          <TextList icon={<MapPinCheck size={16} />} text="Oman, Muscat" />
-          <TextList icon={<Clock size={15} />} text="09:40 AM - 08:20 PM" />
-          <TextList
-            icon={<LeafyGreen size={15} />}
-            text="Male / Female (+14 years old)"
-          />
-        </div>
+    <div className="w-full p-3  rounded-xl overflow-hidden  bg-[#EBF3E8]">
+
+      <div className=" py-1 px-0  flex justify-between">
+        <h1 className="text-[#336940] font-semibold">Event 1</h1>
+        <p className="font-light text-sm text-[#727970]">28 Jan 2025</p>
+      </div>
+      <div>
+        <p className="text-sm text-[#727970]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet diam a ipsum ultricies ?</p>
       </div>
     </div>
   );

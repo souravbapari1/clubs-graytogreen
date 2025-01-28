@@ -10,6 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Navigations from "./_components/Navigations";
 const menuItems = [
   {
     name: "Home",
@@ -55,24 +56,9 @@ const menuItems = [
 function page() {
   return (
     <div>
-      <div className="w-full h-[80px] hidden md:flex justify-center gap-3 bg-[#EBF3E8]">
-        {menuItems.map((item, index) => (
-          <TooltipProvider key={index}>
-            <Tooltip>
-              <TooltipTrigger>
-                <NavLink
-                  href={item.href}
-                  className="bg-white text-[#336940] p-4 rounded-full"
-                >
-                  {item.name}
-                </NavLink>
-              </TooltipTrigger>
-            </Tooltip>
-          </TooltipProvider>
-        ))}
-      </div>
+      <Navigations/>
       <Header />
-      <AboutAndJoin />
+      <AboutAndJoin IsImageCenter={false} CardVisible={true} />
       <ClubObjectives />
       <ClubAchievements />
     </div>

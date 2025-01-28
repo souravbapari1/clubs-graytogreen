@@ -1,9 +1,12 @@
 import React from "react";
+import Navigations from "../_components/Navigations";
 
 function page() {
   return (
+    <>
+    <Navigations/>
     <div className="container mt-10">
-      <div className="grid grid-cols-12 gap-5">
+      <div className="grid grid-cols-12 gap-5 animate-pulse">
         <div className="col-span-12 md:col-span-4 flex flex-col gap-4 w-full bg-gray-200 rounded-3xl h-[80vh] p-3">
           <div className="w-full h-60 bg-gray-50 rounded-2xl"></div>
           <div className="w-full h-60 bg-gray-50 rounded-2xl"></div>
@@ -13,6 +16,8 @@ function page() {
         </div>
       </div>
     </div>
+    
+    </>
   );
 }
 
