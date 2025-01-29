@@ -67,16 +67,16 @@ const ClubSponsors: React.FC = () => {
               // <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2  w-[300px] md:w-[800px] py-12 gap-9">
                <div
                   key={index}
-                  className="flex flex-col items-center justify-start rounded-lg bg-[#EBF3E8]  border-[#DDE5DA] border-2  p-4  gap-4 transition-shadow"
+                  className="flex flex-col items-center justify-start rounded-lg bg-[#EBF3E8]  border-[#DDE5DA]/10 border-2  p-3  gap-4 transition-shadow"
                 >
-                  <div className="w-full h-full flex justify-center items-center rounded-lg bg-white">
+                  <div className="w-full h-32 flex justify-center items-center rounded-lg bg-white">
                   <img
                     src={brand.imageUrl}
                     alt={brand.name}
-                    className="w-1/2 h-1/2 object-contain mb-4 "
+                    className="w-1/2 h-14 object-contain  "
                   />
                   </div>
-                  <p className="text-gray-700 text-sm font-medium">{brand.name}</p>
+                  <p className="text-gray-700 text-base font-medium mb-2">{brand.name}</p>
                 </div>
             // </div>
         ))}

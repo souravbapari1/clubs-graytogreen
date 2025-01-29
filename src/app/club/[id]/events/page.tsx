@@ -28,20 +28,24 @@ function page() {
       <div className="container">
         <br />
         <SearchEventBox />
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  md:gap-10 gap-5 mt-6">
-          <div className="gap-5 flex-col flex">
+        <div className="grid  pb-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1  md:gap-10 gap-5 mt-6">
+      <div className="col-span-2">
+      <div className="gap-5 grid grid-cols-2 ">
             <EventCard />
             <EventCard />
             <EventCard />
             <EventCard />
           </div>
-          <div className="h-full">
+      </div>
+          <div className="h-full col-span-1 ">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <StaticDatePicker
               onChange={handleDateChange}
                 sx={{
-                  backgroundColor: "#f0f0f0",
-                  width:'400px' // Change background color
+                  backgroundColor: "#0000",
+                  // width:'900px',
+                  
+                  // Change background color
                 }}
                 defaultValue={defaultValue}
               />

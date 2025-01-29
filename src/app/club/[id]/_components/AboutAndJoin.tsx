@@ -13,7 +13,7 @@ function AboutAndJoin({CardVisible,IsImageCenter}:any) {
               Growing Green Minds: Empowering Sustainability for a Better
               Tomorrow
             </h1>
-            <p className="mt-5 text-[#727970] w-full md:w-[80%] text-[15px] md:text-[19px] font-light leading-[21px]">
+            <p className="mt-5 text-[#727970] w-full md:w-[80%] text-sm md:text-base font-light ">
               It is a green initiative to spread environmental awareness in
               schools and environmental communities. The club has contributed to
               sustainability practices by sorting and recycling waste,
@@ -29,7 +29,7 @@ function AboutAndJoin({CardVisible,IsImageCenter}:any) {
 
            
           </div>
-          <div className={`w-full  md:h-[80vh] flex ${IsImageCenter?'justify-center':'justify-end'}  items-center px-0 py-6 pt-12 relative`}>
+          <div className={`w-full  md:h-[80vh] flex ${IsImageCenter?'justify-center':'justify-end'}  items-center  py-6 pt-12 relative`}>
             <div className={`2xl:w-[990px] lg:w-[850px] w-full md:h-[451px] h-[400px]  overflow-hidden ${IsImageCenter?'rounded-xl' :'lg:rounded-l-3xl'} bg-[url('https://s3-alpha-sig.figma.com/img/2280/f178/0944eeb0e1f4ade5f20c21c7075a6c44?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BNAKgphKpZTmAInZtGPDkcIr2QtFWNc--LnDypTHFdJvyWpl0ad5l2MMNOYii6FnASk8s~ucpg2HIlzVyfPqgX6VHSkvlBdmzms~cKxABhZsdEklLS1-m1fsb6N1sCvRDCbheB3iYnMybbvtnPqnsGxC2SNg4lIQ95cJFkrUzF~ugisfigT-W5mgkf4dtiYMGepAYTyshjlu-Ibc8CTLIaeZ-5~YkfV9LQDfEq5-RS71xfkJWhI3EbXQ4~wr8RWDztPMfLNHuwfJvjK7JBXX~7gK92be-YOoRvFMqw~~tBM9ypkWyd3peX8z94nLtBZegon-WOZp4CeqhOsC62vkEg__')] bg-no-repeat bg-cover`}>
             
             </div>

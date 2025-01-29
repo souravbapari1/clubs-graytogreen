@@ -10,13 +10,13 @@ function page() {
   return (
     <div className="">
       <Navigations/>
-      <div className="container p-4 flex justify-center items-center flex-col ">
+      <div className=" p-4 flex justify-center items-center flex-col ">
       <h1 className="text-[#336940] text-center text-2xl font-bold mb-[20px]">Purpose of the SDGs</h1>
 
       <TabList />
         <ChallengesAndSDG />
         <DevelopmentGoals/>
-      <h1 className="text-[#336940] text-center text-2xl font-bold mb-[20px]">Challenges with SDGs</h1>
+      <h1 className="text-[#336940] text-center text-2xl font-bold mb-[20px]">Pupose of SDGs</h1>
         <PurposeOfSdg/>
       </div>
     </div>

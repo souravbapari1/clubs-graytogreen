@@ -8,7 +8,7 @@ function TabList() {
   const activeClassName = "border-b-2 text-white rounded-full bg-[#336940]  ";
   return (
     <div>
-      <div className=" w-auto p-3 py-1 rounded-full bg-[#EAFFE8] h-12 border-b flex justify-center items-center gap-4 text-sm select-none font-bold text-gray-700">
+      <div className=" w-auto p-3 py-1 rounded-full bg-[#EAFFE8] h-12  flex justify-center items-center gap-4 text-sm select-none font-bold text-gray-700">
         <p
           onClick={() => setTabIndex(0)}
           className={cn(
