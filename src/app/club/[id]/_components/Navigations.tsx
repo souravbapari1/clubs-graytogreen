@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Goal,
   Home,
@@ -8,15 +10,16 @@ import {
   PartyPopper,
   UsersIcon,
 } from "lucide-react";
-import React from "react";
+// import NavLink from "@/components/layout/Navbar/NavLink";
+import Link from "next/link";
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Link from "next/link";
-import NavLink from "@/components/layout/Navbar/NavLink";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
   {
@@ -61,34 +64,29 @@ const menuItems = [
   },
 ];
 
-function NavigationOptions() {
+function Navigations() {
+  const pathname = usePathname();
   return (
-    <>
-    
-    
-    <div className=" fixed md:hidden md:left-4 md:top-0 bottom-3 md:my-auto  z-40 md:h-auto md:w-14 w-full flex  flex-row justify-center items-center">
-      <div className=" flex md:justify-between md:flex-col flex-row md:items-center  shadow-md  bg-white md:w-14  p-2 md:rounded-full gap-1">
-        {menuItems.map((item, index) => (
-          <TooltipProvider key={index}>
-            <Tooltip>
-              <TooltipTrigger>
-                <Link
-                  href={item.href}
-                  className="md:w-11 w-10 md:h-11 h-10 bg-primary/10 hover:bg-primary/20 md:rounded-full border-2 border-primary/20 flex justify-center items-center"
-                >
-                  {item.icons}
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">
-                <p>{item.name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ))}
-      </div>
+    <div className="w-full h-[70px]  hidden md:flex justify-center gap-3 bg-[#EBF3E8]">
+      {menuItems.map((item, index) => (
+        <TooltipProvider key={index}>
+          <Tooltip>
+            <TooltipTrigger>
+            <Link
+          key={index}
+          href={item.href}
+          className={` md:text-sm lg:text-sm text-[#336940] p-4 py-2 rounded-full ${
+            pathname === item.href ? "text-[#336940]  bg-white" : "text-[#727970]"
+          }`}
+        >
+          {item.name}
+        </Link>
+            </TooltipTrigger>
+          </Tooltip>
+        </TooltipProvider>
+      ))}
     </div>
-    </>
   );
 }
 
-export default NavigationOptions;
+export default Navigations;

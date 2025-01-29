@@ -4,38 +4,27 @@ import React from "react";
 
 function BlogPostBox() {
   return (
-    <div className="w-full border-2 border-primary/5 shadow hover:shadow-lg shadow-gray-200 transition-all ">
-      <Image
-        alt="blog"
-        src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-waterfall-free-image.jpeg?w=600&quality=80"
-        width={1000}
-        height={1000}
-        className="w-full h-52"
-      />
-      <div className="flex  justify-between px-5 mt-5">
-        <h1 className="font-bold text-gray-700 uppercase text-sm">
-          01 Jan 2025
-        </h1>
-        <div className="">
-          <Badge variant="secondary" className="text-xs">
-            Planting
-          </Badge>
-        </div>
+    <div
+      key={1}
+      className="flex flex-col items-center justify-start rounded-lg bg-[#EBF3E8]  border-[#DDE5DA] border-2  p-4 p  gap-4 transition-shadow"
+    >
+      <div className="w-full  overflow-hidden h-[150px] flex  rounded-lg bg-white">
+        <img
+          src={"https://images.pexels.com/photos/724994/pexels-photo-724994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"}
+          alt={"BlogImage"}
+          className="h-full 
+          w-full  object-cover mb-4 "
+        />
       </div>
-      <div className="flex flex-col justify-between p-5">
-        <div className="flex flex-col gap-4">
-          <h2 className="text-xl font-bold">
-            <span className="text-gray-900">
-              The Power Of Achieve More Together
-            </span>
-          </h2>
-          <p className="text-gray-900">
-            <span className="text-gray-500">
-              Explore the concept of collaboration and its impact on
-              productivity.
-            </span>
-          </p>
-        </div>
+      <div className=" flex justify-between items-center w-full ">
+
+      <p className="text-[#727970] text-sm font-medium">01 Jan 2025</p>
+      <p className="text-[#727970] bg-[#F6FFF2] p-1 rounded-full  text-center text-sm font-medium">Planting</p>
+      </div>
+
+      <div>
+        <h1 className="  text-2xl">The Power Of Brain to Adapt </h1>
+        <p className="text-[#727970]">Explore the concept of collaboration and its impact on productivity.</p>
       </div>
     </div>
   );

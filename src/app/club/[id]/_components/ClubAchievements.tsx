@@ -9,7 +9,7 @@ function ClubAchievements() {
       <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
         {Array.from({ length: 8 }).map((_, id) => {
           return (
-            <div className="" key={id}>
+            <div className={`${id>3 && id<8 ? 'md:mt-[6.5rem]':''}`} key={id}>
               <div className="w-full h-auto bg-[#EBF3E8] p-3 flex-col flex gap-4 border border-[#DDE5DA] rounded-xl overflow-hidden">
                 <div className="h-36  w-full relative ">
                   <Image
@@ -37,7 +37,6 @@ function ClubAchievements() {
       </div>
 
 
-      <ClubSocialLink />
 
       
 
