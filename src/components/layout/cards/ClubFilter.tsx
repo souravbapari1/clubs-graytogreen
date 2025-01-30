@@ -26,8 +26,8 @@ function ClubFilter() {
 
   return (
     <>
-      <div className="container mx-auto mt-10">
-        <div className="md:px-4 px-5">
+      <div className=" mx-auto mt-10">
+        <div className="">
           <div className="mx-auto md:h-14 h-12 bg-[#F9F9F9]   flex justify-between  md:px-6 px-4  items-center rounded-full relative">
             <div className="flex justify-start items-center md:gap-2 relative">
               <div className="w-10">
