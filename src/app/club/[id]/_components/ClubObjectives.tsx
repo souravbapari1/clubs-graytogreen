@@ -11,14 +11,14 @@ function ClubObjectives() {
         </h2>
         <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
 
-        <div className="px-24 grid grid-cols-2 gap-8 mt-20">
+        <div className=" sm:px-12 md:px-24 grid grid-cols-1   md:grid-cols-2 gap-4 md:gap-8 mt-20">
           {Array.from({ length: 4 }).map((data, index) => (
             <div className="relative flex flex-col justify-center items-center   text-white">
               <div className="p-5 bg-[#33694066] gap-5 flex  items-center backdrop-blur-md rounded-3xl shadow-md w-full ">
                 <p className="text-xl font-medium">
                   <CheckCircle size={40} />
                 </p>
-                <h1 className="text-[12px] md:text-lg font-medium mt-2 ml-3">
+                <h1 className="text-sm md:text-lg font-medium mt-2 ml-3">
                   Founded in 2022 with a mission to promote sustainability
                 </h1>
               </div>

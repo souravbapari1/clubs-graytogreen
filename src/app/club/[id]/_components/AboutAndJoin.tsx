@@ -12,7 +12,7 @@ function AboutAndJoin({ CardVisible, IsImageCenter }: any) {
             IsImageCenter ? "pr-10" : "pr-0"
           }`}
         >
-          <div className="w-[86%] ml-32  md:p-0 flex flex-col justify-center items-start">
+          <div className="w-[86%] md:ml-32 p-5 md:p-0 flex flex-col justify-center items-start">
             <h1 className="text-[21px] md:text-[36px] font-light text-[#336940]">
               Growing Green Minds: Empowering Sustainability for a Better
               Tomorrow

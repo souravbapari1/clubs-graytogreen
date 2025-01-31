@@ -8,7 +8,7 @@ function BlogPostBox() {
       key={1}
       className="flex flex-col items-center justify-start rounded-lg bg-[#EBF3E8]  border-[#DDE5DA] border-2  p-4 p  gap-4 transition-shadow"
     >
-      <div className="w-full  overflow-hidden h-[150px] flex  rounded-lg bg-white">
+      <div className="w-full  overflow-hidden h-[190px] flex  rounded-lg bg-white">
         <img
           src={"https://images.pexels.com/photos/724994/pexels-photo-724994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"}
           alt={"BlogImage"}
@@ -19,7 +19,7 @@ function BlogPostBox() {
       <div className=" flex justify-between items-center w-full ">
 
       <p className="text-[#727970] text-sm font-medium">01 Jan 2025</p>
-      <p className="text-[#727970] bg-[#F6FFF2] p-1 rounded-full  text-center text-sm font-medium">Planting</p>
+      <p className="text-[#727970] bg-[#F6FFF2] p-1 px-3 rounded-full  text-center text-sm font-medium">Planting</p>
       </div>
 
       <div>
