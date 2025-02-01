@@ -46,7 +46,7 @@ const PurposeOfSdg = () => {
           key={index}
           className="flex flex-col items-center justify-start rounded-lg bg-[#EBF3E8] border-2 border-[#DDE5DA]   p-4  gap-4 "
         >
-          <div className="w-full h-32 flex justify-center items-center rounded-lg bg-white">
+          <div className="w-full  flex justify-center items-center rounded-lg ">
           <img
             src={brand.imageUrl}
             alt={brand.para}
